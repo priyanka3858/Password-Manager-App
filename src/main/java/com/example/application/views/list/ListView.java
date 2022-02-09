@@ -75,7 +75,7 @@ public class ListView extends VerticalLayout {
     private void configureGrid() {
         grid.addClassNames("password-item-grid");
         grid.setSizeFull();
-        grid.setColumns("url", "website", "username", "password");
+        grid.setColumns("url", "website", "username", "password", "userId");
         grid.getColumns().forEach(col -> col.setAutoWidth(true));
         grid.asSingleSelect().addValueChangeListener(e-> editPassword(e.getValue()) );
     }

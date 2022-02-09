@@ -7,6 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.util.UUID;
 
 @Entity
 public class Password extends AbstractEntity {
@@ -22,6 +23,8 @@ public class Password extends AbstractEntity {
 
     @NotEmpty
     private String password = "";
+
+    private UUID userId;
 
     @Override
     public String toString() {
@@ -54,5 +57,16 @@ public class Password extends AbstractEntity {
 
     public String getPassword() {   return password; }
 
-    public void setPassword(String password) { this.password = password;}
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public UUID getUserId() {
+        return userId;
+    }
+
+    public void setUserId(UUID userId) {
+        this.userId = userId;
+    }
 }
+

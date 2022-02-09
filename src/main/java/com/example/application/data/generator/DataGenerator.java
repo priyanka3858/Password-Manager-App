@@ -11,6 +11,7 @@ import com.vaadin.flow.spring.annotation.SpringComponent;
 import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
