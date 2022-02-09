@@ -1,27 +1,17 @@
 # Password Manager
 
-This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+This Application stores and manages users usernames and password information of the
+different accounts. This application will help the user remember different usernames and
+passwords for accounts on the internet in the secure encrypted database.Furthermore,
+users allow adding, edit, and delete accounts details using this tool.
+The encrypted Password Manager tool saves all the details will be saved in the
+database in encrypted format.
 
 ## Running the application
 
-The project is a standard Maven project. To run it from the command line,
-type `mvnw` (Windows), or `./mvnw` (Mac & Linux), then open
-http://localhost:8080 in your browser.
+The project is a standard Maven project.AfterRunning the application then, open http://localhost:8080 in your browser.
+To run this application, install Nod.js.
 
-You can also import the project to your IDE of choice as you would with any
-Maven project. Read more on [how to import Vaadin projects to different 
-IDEs](https://vaadin.com/docs/latest/flow/guide/step-by-step/importing) (Eclipse, IntelliJ IDEA, NetBeans, and VS Code).
-
-## Deploying to Production
-
-To create a production build, call `mvnw clean package -Pproduction` (Windows),
-or `./mvnw clean package -Pproduction` (Mac & Linux).
-This will build a JAR file with all the dependencies and front-end resources,
-ready to be deployed. The file can be found in the `target` folder after the build completes.
-
-Once the JAR file is built, you can run it using
-`java -jar target/com.passwordmanager-1.0-SNAPSHOT.jar`
 
 ## Project structure
 
@@ -31,17 +21,26 @@ Once the JAR file is built, you can run it using
 - `views` package in `src/main/java` contains the server-side Java views of your application.
 - `views` folder in `frontend/` contains the client-side JavaScript views of your application.
 - `themes` folder in `frontend/` contains the custom CSS styles.
+##**How to run this project:**
+>The main root of the project is src/pm/main. Once you run the Main class in side the src/pm/main ot will ask you the following:
+>
+> test cases availble inside tests folder.
 
-## Useful links
+### Login window
+To run this application, open http://localhost:8080 in your browser and user will first see the login window; then, they can type their username and master password to log in or register as a new user. Example  of Log in window given below.
 
-- Read the documentation at [vaadin.com/docs](https://vaadin.com/docs).
-- Follow the tutorials at [vaadin.com/tutorials](https://vaadin.com/tutorials).
-- Watch training videos and get certified at [vaadin.com/learn/training](https://vaadin.com/learn/training).
-- Create new projects at [start.vaadin.com](https://start.vaadin.com/).
-- Search UI components and their usage examples at [vaadin.com/components](https://vaadin.com/components).
-- View use case applications that demonstrate Vaadin capabilities at [vaadin.com/examples-and-demos](https://vaadin.com/examples-and-demos).
-- Discover Vaadin's set of CSS utility classes that enable building any UI without custom CSS in the [docs](https://vaadin.com/docs/latest/ds/foundation/utility-classes). 
-- Find a collection of solutions to common use cases in [Vaadin Cookbook](https://cookbook.vaadin.com/).
-- Find Add-ons at [vaadin.com/directory](https://vaadin.com/directory).
-- Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/vaadin) or join our [Discord channel](https://discord.gg/MYFq5RTbBn).
-- Report issues, create pull requests in [GitHub](https://github.com/vaadin/platform).
+![](../../../../../var/folders/32/_8rs7y051w9b3b31pbvx_8dc0000gp/T/TemporaryItems/NSIRD_screencaptureui_eo9gFF/Screen Shot 2022-02-09 at 6.11.29 PM.png)
+
+###Register window
+ Register as a  new user with a username and password.
+![](../../../../../var/folders/32/_8rs7y051w9b3b31pbvx_8dc0000gp/T/TemporaryItems/NSIRD_screencaptureui_mcLPx4/Screen Shot 2022-02-09 at 5.57.45 PM.png)
+
+###Main window
+After logging in, you will reach the main window where all the passwords are stored. 
+
+![](../../../../../var/folders/32/_8rs7y051w9b3b31pbvx_8dc0000gp/T/TemporaryItems/NSIRD_screencaptureui_Om91W1/Screen Shot 2022-02-09 at 6.06.26 PM.png)
+
+### Add Password 
+When you want to add a new password, Click on the `Add Password` button, and the right side layout is shown. After adding a new password is finished, the list will be updated. Click on the `Delete` button to delete the password item, and to log out, click on the `Logout` Button.
+
+![](../../../../../var/folders/32/_8rs7y051w9b3b31pbvx_8dc0000gp/T/TemporaryItems/NSIRD_screencaptureui_xQShrL/Screen Shot 2022-02-09 at 6.05.41 PM.png)
