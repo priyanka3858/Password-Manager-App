@@ -5,7 +5,7 @@
     <!-- Vaadin project from https://start.vaadin.com/project/b2d9f31a-881d-40f3-a9a4-e8bfc6ebee0d -->
     <groupId>com.example.application</groupId>
     <artifactId>passwordmanager</artifactId>
-    <name>Project base for Spring Boot and Vaadin Flow</name>
+    <name>Password manages and stores the password for user</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
