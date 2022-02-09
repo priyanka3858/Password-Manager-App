@@ -14,7 +14,7 @@ import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.ValidationException;
 import com.vaadin.flow.shared.Registration;
 
-class PasswordItemForm extends FormLayout {
+public class PasswordItemForm extends FormLayout {
     Binder<Password> binder = new BeanValidationBinder<>(Password.class);
     private Password pass;
 
