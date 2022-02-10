@@ -41,6 +41,6 @@ After logging in, you will reach the main window where all the passwords are sto
 ![](../../../../../var/folders/32/_8rs7y051w9b3b31pbvx_8dc0000gp/T/TemporaryItems/NSIRD_screencaptureui_Om91W1/Screen Shot 2022-02-09 at 6.06.26 PM.png)
 
 ### Add Password 
-When you want to add a new password, Click on the `Add Password` button, and the right side layout is shown. After adding a new password is finished, the list will be updated. Click on the `Delete` button to delete the password item, and to log out, click on the `Logout` Button.
+When you want to add a new password, Click on the `Add Password` button, and the right side layout is shown. After adding a new password is finished, the list will be updated. Click on the `Delete` button to delete the password item, and to log out, click on the `Logout` button.
 
 ![](../../../../../var/folders/32/_8rs7y051w9b3b31pbvx_8dc0000gp/T/TemporaryItems/NSIRD_screencaptureui_xQShrL/Screen Shot 2022-02-09 at 6.05.41 PM.png)
