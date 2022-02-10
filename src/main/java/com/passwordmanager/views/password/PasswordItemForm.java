@@ -44,7 +44,10 @@ public class PasswordItemForm extends FormLayout {
         this.pass = pass;
         binder.readBean(pass);
     }
-
+    /*
+    HorizontalLayout create  createButtonsLayout
+    create save , delete and close button
+     */
     private HorizontalLayout createButtonsLayout() {
         save.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         delete.addThemeVariants(ButtonVariant.LUMO_ERROR);
@@ -56,10 +59,7 @@ public class PasswordItemForm extends FormLayout {
         save.addClickListener(event -> validateAndSave());
         delete.addClickListener(event -> fireEvent(new DeleteEvent(this, pass)));
         close.addClickListener(event -> fireEvent(new CloseEvent(this)));
-
 //        binder.addStatusChangeListener(e -> save.setEnabled(binder.isValid()));
-
-
         return new HorizontalLayout(save, delete, close);
     }
 
