@@ -38,8 +38,8 @@ public class DataGenerator {
 
             User user = new User();
             user.setName("John Normal");
-            user.setUsername("123");
-            user.setHashedPassword(passwordEncoder.encode("123"));
+            user.setUsername("user");
+            user.setHashedPassword(passwordEncoder.encode("pass"));
             user.setProfilePictureUrl(
                     "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=128&h=128&q=80");
             user.setRoles(Collections.singleton(Role.USER));
