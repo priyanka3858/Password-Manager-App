@@ -91,17 +91,15 @@ public class PasswordList extends VerticalLayout {
     }
 
     private HorizontalLayout getToolbar() {
-//        filterText.setPlaceholder("Filter by name...");
-//        filterText.setClearButtonVisible(true);
-//        filterText.setValueChangeMode(ValueChangeMode.LAZY);
-//        filterText.addValueChangeListener(e -> updateList());
+        filterText.setPlaceholder("Filter by name...");
+        filterText.setClearButtonVisible(true);
+        filterText.setValueChangeMode(ValueChangeMode.LAZY);
+        filterText.addValueChangeListener(e -> updateList());
 
         Button addPasswordButton = new Button("Add Password");
         addPasswordButton.addClickListener(e -> addPassword());
 
-//        HorizontalLayout toolbar = new HorizontalLayout(filterText, addPasswordButton);
-
-        HorizontalLayout toolbar = new HorizontalLayout(addPasswordButton);
+        HorizontalLayout toolbar = new HorizontalLayout(filterText, addPasswordButton);
 
         toolbar.addClassName("toolbar");
 

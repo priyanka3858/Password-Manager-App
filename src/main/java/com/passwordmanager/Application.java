@@ -1,5 +1,6 @@
 package com.passwordmanager;
 
+import com.passwordmanager.data.service.PasswordSearch;
 import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.component.page.AppShellConfigurator;
 import com.vaadin.flow.server.PWA;
@@ -20,9 +21,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @NpmPackage(value = "line-awesome", version = "1.3.0")
 public class Application implements AppShellConfigurator {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 //        SerializationDemo serializationDemo = new SerializationDemo();
 //        serializationDemo.serialization();
+
+//        PasswordSearch passwordSearch = new PasswordSearch();
+//        passwordSearch.TestFixedPool();
+//        passwordSearch.TestDynamicPool();
 
         SpringApplication.run(Application.class, args);
     }
