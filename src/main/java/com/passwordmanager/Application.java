@@ -26,10 +26,10 @@ public class Application implements AppShellConfigurator {
 //        serializationDemo.serialization();
 
 //        PasswordSearch passwordSearch = new PasswordSearch();
-//        passwordSearch.TestFixedPool();
+//        passwordSearch.TestFixedPool(3);
 //        passwordSearch.TestDynamicPool();
 
-        SpringApplication.run(Application.class, args);
+         SpringApplication.run(Application.class, args);
     }
 
 }

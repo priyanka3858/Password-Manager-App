@@ -11,6 +11,7 @@ public class PasswordSearch {
     public static class SearchPassword implements Runnable {
         private final String stringFilter;
         Date date = new Date();
+        SimpleDateFormat dateformat = new SimpleDateFormat("hh:mm:ss");
 
         public SearchPassword(String s)
         {
@@ -18,13 +19,14 @@ public class PasswordSearch {
         }
 
         public void run() {
-            SimpleDateFormat time = new SimpleDateFormat("hh:mm:ss");
-            System.out.println(Thread.currentThread().getName()+" [Start] searchTerm = "+ stringFilter + " at "+time.format(date));
+            Date startTime = new Date();
+            System.out.println(Thread.currentThread().getName()+" [Start] searchTerm = "+ stringFilter + " at "+dateformat.format(startTime));
 
             //method to search the database
             searchToDatabase();
 
-            System.out.println(Thread.currentThread().getName()+" [End] " + "at "+time.format(date));
+            Date endTime = new Date();
+            System.out.println(Thread.currentThread().getName()+" [End] " + "at "+dateformat.format(endTime));
         }
 
         private void searchToDatabase(){
@@ -46,10 +48,9 @@ public class PasswordSearch {
         }
     }
 
-    public void TestFixedPool() {
+    public void TestFixedPool(int poolSize) throws InterruptedException {
 
-        ExecutorService threadPool = Executors.newFixedThreadPool(3);//creating a pool of 3 threads
-
+        ExecutorService threadPool = Executors.newFixedThreadPool(poolSize);
 
         List<String> searchTerms = List.of("search1", "search2", "search3", "search4", "search5");
 
