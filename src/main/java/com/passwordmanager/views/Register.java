@@ -36,15 +36,18 @@ public class Register extends Composite {
 
     @Override
     protected Component initContent() {
+        TextField name = new TextField("Name");
         TextField username = new TextField("Username");
         PasswordField password1 = new PasswordField("Password");
         PasswordField password2 = new PasswordField("Confirm password");
         VerticalLayout mainLayout = new VerticalLayout(
                 new H2("Register"),
+                name,
                 username,
                 password1,
                 password2,
                 new Button("Register", event -> register(
+                        name.getValue(),
                         username.getValue(),
                         password1.getValue(),
                         password2.getValue()
@@ -57,7 +60,7 @@ public class Register extends Composite {
         return mainLayout;
     }
 
-    private void register(String username, String password1, String password2) {
+    private void register(String name, String username, String password1, String password2) {
         if (username.trim().isEmpty()) {
             Notification.show("Enter a username");
         } else if (password1.isEmpty()) {
@@ -70,8 +73,8 @@ public class Register extends Composite {
 //        }
         else {
             User user = new User();
-            user.setName(username);
-            user.setUsername(password1);
+            user.setName(name);
+            user.setUsername(username);
             user.setHashedPassword( passwordEncoder.encode(password1));
             user.setProfilePictureUrl(
                     "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=128&h=128&q=80");

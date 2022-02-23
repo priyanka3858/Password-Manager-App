@@ -1,5 +1,3 @@
-
-
 package com.passwordmanager.data.repository;
 
 import com.passwordmanager.data.entity.Password;
@@ -14,6 +12,8 @@ public interface PasswordRepository extends JpaRepository<Password, Integer> {
 
     @Query("select c from Password c " +
             "where lower(c.url) like lower(concat('%', :searchTerm, '%')) " +
-            "or lower(c.website) like lower(concat('%', :searchTerm, '%'))")
+            "or lower(c.website) like lower(concat('%', :searchTerm, '%')) order by c.username")
     List<Password> search(@Param("searchTerm") String searchTerm);
 }
+
+
