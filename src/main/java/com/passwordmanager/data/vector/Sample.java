@@ -15,5 +15,9 @@ public class Sample {
     public void setName(String name) {
         this.name = name;
     }
+
+    public static int parseInt(String name) {
+        return Integer.parseInt(name);
+    }
 }
 
