@@ -1,38 +1,76 @@
+package com.passwordmanager.data.entity;
 
+import javax.validation.constraints.NotEmpty;
+import java.util.UUID;
 
+public class Configuration{
 
-// Generic class example to show how to setup generic classes type for base configuration type
-public class BaseConfigurationType<T> {
-    // an object of type T is declared
-    private T type;
+    private UUID userId; // foregin key  ( primary key in users)
 
-    // constructor
-    public BaseConfigurationType(T type){
-        this.type = type;
+    private boolean darkMode;
+
+    private int paginationLimit;
+
+    private boolean notifyLeakedPasseord;
+
+    private boolean notifyMasterPasswordChange;
+
+    private boolean newsLetter;
+
+    public Configuration(UUID userId, boolean darkMode, int paginationLimit, boolean notifyLeakedPasseord, boolean notifyMasterPasswordChange, boolean newsLetter) {
+        this.userId = userId;
+        this.darkMode = darkMode;
+        this.paginationLimit = paginationLimit;
+        this.notifyLeakedPasseord = notifyLeakedPasseord;
+        this.notifyMasterPasswordChange = notifyMasterPasswordChange;
+        this.newsLetter = newsLetter;
     }
 
-    public BaseConfigurationType() {
-
+    public UUID getUserId() {
+        return userId;
     }
 
-    // getter method
-    public T getObject() {
-        return type;
+    public void setUserId(UUID userId) {
+        this.userId = userId;
     }
-    // setter method
-    public void setObject(T type) {
-        this.type = type;
+
+    public boolean isDarkMode() {
+        return darkMode;
     }
-}
 
+    public void setDarkMode(boolean darkMode) {
+        this.darkMode = darkMode;
+    }
 
-// Use of generic class
-public void setDarkMode(){;
-    BaseConfigurationType<Boolean> darkMode = new BaseConfigurationType<>(false);
+    public int getPaginationLimit() {
+        return paginationLimit;
+    }
 
-    darkMode.setObject(true);
+    public void setPaginationLimit(int paginationLimit) {
+        this.paginationLimit = paginationLimit;
+    }
 
-    if (darkMode.getObject()) {
-        // do something
+    public boolean isNotifyLeakedPasseord() {
+        return notifyLeakedPasseord;
+    }
+
+    public void setNotifyLeakedPasseord(boolean notifyLeakedPasseord) {
+        this.notifyLeakedPasseord = notifyLeakedPasseord;
+    }
+
+    public boolean isNotifyMasterPasswordChange() {
+        return notifyMasterPasswordChange;
+    }
+
+    public void setNotifyMasterPasswordChange(boolean notifyMasterPasswordChange) {
+        this.notifyMasterPasswordChange = notifyMasterPasswordChange;
+    }
+
+    public boolean isNewsLetter() {
+        return newsLetter;
+    }
+
+    public void setNewsLetter(boolean newsLetter) {
+        this.newsLetter = newsLetter;
     }
 }
